@@ -11,14 +11,16 @@ int rows = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("write number of columns: ");
 int columns = Convert.ToInt32(Console.ReadLine());
-int min = 2;
+
 int max = 20;
+int min = 2;
+
 double [,] matrix = new double [rows,columns];
 for (int i = 0; i < matrix.GetLength(0); i++)
 {
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
-        matrix[i,j] = Math.Round((new Random().NextDouble()) * 18 + 2 , 2);
+        matrix[i,j] = Math.Round((new Random().NextDouble()) * (max - min) + min , 2);
         Console.Write(matrix[i,j]+" ");
     }
     Console.WriteLine();
